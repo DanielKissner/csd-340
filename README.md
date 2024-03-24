@@ -3,4 +3,4 @@
 ## Contributors: 
 1. Professor Sue Sampson
 2. Daniel Kissner
-Online repository for CSD 340 course
+
