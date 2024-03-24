@@ -1,2 +1,6 @@
 # csd-340
-Online repository for CSD 340 course
+# CSD Web Development with HTML and CSS
+## Contributors: 
+1. Professor Sue Sampson
+2. Daniel Kissner
+
