@@ -1,0 +1,26 @@
+#image_gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 10%;
+  }
+  
+  h1, h3, figcaption {
+    text-align: center;
+  }
+  
+  figcaption {
+    font-style: italic;
+    font-size: 0.75em;
+  }
+  
+  h1 {
+    color: rgb(10, 24, 113); 
+  }
+  
+  h3 {
+    color: rgb(191, 1, 42); 
+  }
+  
+  figcaption {
+    color: rgb(211, 167, 7); 
+  }
