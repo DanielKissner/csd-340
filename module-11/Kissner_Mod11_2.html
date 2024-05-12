@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CSD 340 Web Development with HTML and CSS</title>
+
+</head>
+
+<body>
+  <div id="container">
+    <h1>Assignment 11.2: JavaScript - Part 3</h1>
+    <br>
+    <p>This is an interactive To-Do list.  To add an item, type the item in the text box and click "add".  Click "Display" to see the current items in the list.</p>
+    <p>To Delete the last entry, simply click "Delete Last Entry"</p>
+     <br>
+     <form action="/url" method="GET">
+        <label>
+          <input type="text" name="input" minlength="3" placeholder="Strings Only!">
+        </label>
+        <button type="button" onclick="add()">ADD</button>
+        <button type="button" onclick="remove()">DELETE LAST ENTRY</button>
+        <button type="button" onclick="displayArray()">DISPLAY</button>
+      </form>
+      <br>
+      <hr>
+      <br>
+      <div id="output"></div>
+    </div>
+  
+    <script>
+      var Array = [];
+      var arraySize = Array.length;
+  
+      function add() {
+        var input = document.querySelector('input[name="input"]').value;
+        Array.push(input);
+        alert('Added: ' + input);
+        displayArray();
+      }
+  
+      function displayArray() {
+        var output = document.getElementById('output');
+        output.innerHTML = '<ul>';
+        for (var i = 0; i < Array.length; i++) {
+          output.innerHTML += '<li>' + (i + 1) + '. ' + Array[i] + '</li>';
+        }
+        output.innerHTML += '</ul>';
+        
+      }
+
+      function remove() {
+        Array.pop()
+        displayArray();
+
+      }
+    </script>
+  </body>
+  </html>
