@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSD 340 Web Development with HTML and CSS</title>
+        <link rel="stylesheet" href="Kissner_Mod12_2.css">
+    </head>
+
+    <title>CSD 340 Web Development with HTML and CSS</title>
+
+    <body>
+        <div id="container">
+            <h1>Assignment 12.2: JavaScript - Part 4</h1>
+        </div>
+
+        <div id="left">
+            <h3>Top 10 Favorite Books</h3>
+            <button type="button" onclick="descending()">Bottom To Top</button>
+            <button type="button" onclick="ascending()">Top To Bottom</button>
+        <br>
+            <ul id="booklist"></ul>
+        </div>
+
+        <div id="right">
+            <h3>5 Things I've Learned Since This Course Started</h3>
+            <ul>
+                <li>How to link a css stylesheet to an HTML file</li>
+                <li>How to create ordered and Unordered lists in HTML</li>
+                <li>Pattern Recognition helps us decipher fonts</li>
+                <li>Sustained attention only lasts 10 minutes</li>
+                <li>How to validate HTML and CSS files on W3C</li>
+            </ul>
+        </div>
+
+        <div id="bottom"></div>
+
+        <div id="final">
+            <a href="../index.html">Back to the Index page</a>
+        </div>
+
+        <script>
+            var books = new Array();
+                books[0] = "1. The Left Hand of Darkness",
+                books[1] = "2. Watership Down",
+                books[2] = "3. The Haunting of Hill House",
+                books[3] = "4. The Lathe of Heaven",
+                books[4] = "5. Neuromancer",
+                books[5] = "6. We Have Always Lived In The Castle",
+                books[6] = "7. Invisible Man",
+                books[7] = "8. Brave New World",
+                books[8] = "9. The Road",
+                books[9] = "10. Redwall"
+            ;
+            
+            var reversebooks = [].concat(books).reverse();
+            var html = "";
+            for (var i =0; i < books.length; i++) {
+                html += "<li>" + books[i]+ "</li>";
+            }
+            document.getElementById("booklist").innerHTML = html;
+
+            function descending() {
+                var html = "";
+                for (var i =0; i < reversebooks.length; i++) {
+                    html += "<li>" + reversebooks[i]+ "</li>";
+                }
+                document.getElementById("booklist").innerHTML = html;
+            }
+
+            function ascending() {
+                var html = "";
+                for (var i =0; i < books.length; i++) {
+                    html += "<li>" + books[i]+ "</li>";
+                }
+                document.getElementById("booklist").innerHTML = html;
+
+            }
+
+
+
+
+
+
+
+
+
+                
+
+        </script>
+
+    </body>
+
+   
+
+    </html>
